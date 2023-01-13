@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, Subtitulo, Title, Titulo } from '../styled.js';
+import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, StyledLink, Subtitulo, Title, Titulo } from '../styled.js';
 
 
 // Imagens
@@ -20,7 +20,7 @@ const Home = () => {
             Laboratório de Inovação Tecnológica            
           </Titulo>          
             <h2><span><Links href='#'>Projetos</Links></span>
-            <span><Links href='#'> <Link to='/bolsistas' >Bolsistas</Link> </Links></span>
+            <span><Links href=''> <StyledLink to='/bolsistas' >Bolsistas</StyledLink> </Links></span>
             <span><Links href='#'>Sobre</Links></span>
             <Button>Participe do Lit!</Button>
             </h2>

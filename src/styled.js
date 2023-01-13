@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 /* export const Title = styled.h1` // O "h1" é a tag que vai ser usada (não pode ser qualquer coisa, tem que ser a tag que tu quer).
     color: ${props => props.cor};
@@ -68,6 +69,7 @@ export const Titulo = styled.h1`
 
 export const Links = styled.a`
     text-decoration: none;
+    
     margin-left: 20px;
     padding: 5px;
 
@@ -133,4 +135,8 @@ export const Oficinas = styled.h1`
     text-align: center;
 
     margin-top: 50px;
+`
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
 `
