@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, StyledLink, Subtitulo, Title, Titulo } from '../styled.js';
+import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, StyledLink, Subtitulo, Tags, Title, Titulo } from '../styled.js';
 
 
 // Imagens
@@ -32,14 +32,16 @@ const Home = () => {
 
         </Header>
         
-        <Main>
-
-        <Oficinas>Oficinas 4.0 e projeto do Rafael</Oficinas>  
-          <Caixa url={Chuveiro}>
-          </Caixa>
-          <Caixa url={Boi}></Caixa>
-          <Caixa url={Visao}></Caixa>
-          <Caixa url={Robo}></Caixa>
+        <Main colunas={4}>
+        <Tags cor='DBFF00'>Participe do Lit!</Tags>
+        <Tags cor='50E85F' >Projetos</Tags>
+        <Tags cor='50E85F' >Bolsistas</Tags>
+        <Tags cor='50E85F' >Sobre</Tags>
+        <Oficinas>Oficinas 4.0 e projeto do Rafael</Oficinas>         <Caixa radius={0} url={Chuveiro}></Caixa>
+          
+          <Caixa radius={0} url={Boi}></Caixa>
+          <Caixa radius={0} url={Visao}></Caixa>
+          <Caixa radius={0} url={Robo}></Caixa>
         </Main>
 
         <Footer></Footer>

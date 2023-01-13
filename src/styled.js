@@ -71,10 +71,13 @@ export const Main = styled.main`
    grid-template-rows: 20% 80vh;
 
    @media (max-width: 700px) {
+    
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    align-items: center;
+    grid-template-columns: repeat(${props => props.colunas}, 25%);
+    grid-template-rows: 10% 10% auto;
+    align-items: flex-end;
+
+    
 
     padding: 10px;
 
@@ -167,7 +170,7 @@ export const Caixa = styled.div`
 
     @media (max-width: 700px) {
         border: 0;
-        border-radius: 50%;
+        border-radius: ${props => props.radius};
 
         height: 70%;
         width: 100%;
@@ -185,10 +188,28 @@ export const Oficinas = styled.h1`
     margin-top: 50px;
 
     @media (max-width: 700px) {
-        display: none;
+        
     }
 `
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
+`
+
+
+export const Tags = styled.div`
+    border-radius: 20px;
+    border: 2px solid black;
+
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 5px 5px 4px black;
+    background-color: #${props => props.cor};
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+
+    margin: 7px;
+
 `
