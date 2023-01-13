@@ -1,6 +1,12 @@
 import './styled.js';
 import './App.css'
-import { Button, Caixa, Container, Footer, Header, Links, Main, Subtitulo, Title, Titulo } from './styled.js';
+import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, Subtitulo, Title, Titulo } from './styled.js';
+
+// Imagens
+import Chuveiro from './assets/8213.jpg'
+import Boi from "./assets/boi.jpg"
+import Visao from "./assets/visao.jpg"
+import Robo from "./assets/robo.jpg"
 
 function App() {
   return (
@@ -23,7 +29,18 @@ function App() {
 
         </Header>
         
-        <Main></Main>
+        <Main>
+
+        <Oficinas>Oficinas 4.0 e projeto do Rafael</Oficinas>  
+
+
+          <Caixa url={Chuveiro}>
+          </Caixa>
+          <Caixa url={Boi}></Caixa>
+          <Caixa url={Visao}></Caixa>
+          <Caixa url={Robo}></Caixa>
+        </Main>
+
         <Footer></Footer>
 
       </Container>

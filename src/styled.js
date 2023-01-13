@@ -39,6 +39,11 @@ export const Main = styled.main`
    grid-area: main;
    background-color: white;
    height: 80vh;
+
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   grid-template-rows: 20% 80vh;
+   
 `
 
 export const Footer = styled.footer`
@@ -94,4 +99,34 @@ export const Button = styled.button`
     &:hover {
         transform: scale(1.1);
     }
+`
+
+export const Caixa = styled.div`
+    height: 80%;
+    background-color: tomato;
+
+    background-image: url(${props => props.url});
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 4px solid black;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+
+    cursor: pointer;
+`
+
+export const Oficinas = styled.h1`
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    text-align: center;
+
+    margin-top: 50px;
 `
