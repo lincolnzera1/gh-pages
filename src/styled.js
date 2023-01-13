@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Italo from './assets/italo.jpg'
 
 /* export const Title = styled.h1` // O "h1" é a tag que vai ser usada (não pode ser qualquer coisa, tem que ser a tag que tu quer).
     color: ${props => props.cor};
@@ -35,8 +36,28 @@ export const Header = styled.header`
 
     border-bottom: 3px solid black;
 
-    @media (max-width: 620px) {
-        background-color: white;
+    img {
+        height: 100px;
+        display: none;
+    }
+
+    @media (max-width: 700px) {
+        background-color: #50E85F;                    
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        img {
+            text-align: center;
+            display: flex;
+            height: 100%;
+        }
+
+        h2 {
+            display: none;
+        }
+
+
     }
 `
 
@@ -48,6 +69,18 @@ export const Main = styled.main`
    display: grid;
    grid-template-columns: auto auto auto auto;
    grid-template-rows: 20% 80vh;
+
+   @media (max-width: 700px) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+
+    padding: 10px;
+
+    
+
+   }
    
 `
 
@@ -65,6 +98,10 @@ export const Titulo = styled.h1`
 
     padding: 10px;
     padding-left: 60px;
+
+    @media (max-width: 700px) { // Para o titulo sumir e a imagem do lit ficar no meio.
+        display: none;
+    }
 `
 
 export const Links = styled.a`
@@ -108,6 +145,7 @@ export const Button = styled.button`
 `
 
 export const Caixa = styled.div`
+
     height: 80%;
     background-color: tomato;
 
@@ -126,6 +164,16 @@ export const Caixa = styled.div`
     }
 
     cursor: pointer;
+
+    @media (max-width: 700px) {
+        border: 0;
+        border-radius: 50%;
+
+        height: 70%;
+        width: 100%;
+
+        background-color: white;
+    }
 `
 
 export const Oficinas = styled.h1`
@@ -135,6 +183,10 @@ export const Oficinas = styled.h1`
     text-align: center;
 
     margin-top: 50px;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
 `
 
 export const StyledLink = styled(Link)`

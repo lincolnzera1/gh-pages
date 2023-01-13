@@ -8,6 +8,7 @@ import Chuveiro from '../assets/8213.jpg'
 import Boi from "../assets/boi.jpg"
 import Visao from "../assets/visao.jpg"
 import Robo from "../assets/robo.jpg"
+import Lit from "../assets/litLogo.png"
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -16,8 +17,12 @@ const Home = () => {
         
         <Container>
         <Header>
-          <Titulo>
-            Laboratório de Inovação Tecnológica            
+
+          <img src={Lit} alt="" />
+
+          <Titulo frase='Laboratório de Inovação Tecnológica'>
+          
+                        
           </Titulo>          
             <h2><span><Links href='#'>Projetos</Links></span>
             <span><Links href=''> <StyledLink to='/bolsistas' >Bolsistas</StyledLink> </Links></span>
