@@ -1,6 +1,6 @@
 import './styled.js';
 import './App.css'
-import { Caixa, Container, Footer, Header, Links, Main, Subtitulo, Title, Titulo } from './styled.js';
+import { Button, Caixa, Container, Footer, Header, Links, Main, Subtitulo, Title, Titulo } from './styled.js';
 
 function App() {
   return (
@@ -15,20 +15,15 @@ function App() {
             Laboratório de Inovação Tecnológica            
           </Titulo>
           
-          <Links>
-            <h2><span><Links>Projetos</Links></span>
-            <span><Links>Bolsistas</Links></span>
-            <span><Links href=''>Sobre</Links></span></h2>
-          </Links>
+            <h2><span><Links href='#'>Projetos</Links></span>
+            <span><Links href='#'>Bolsistas</Links></span>
+            <span><Links href='#'>Sobre</Links></span>
+            <Button>Participe do Lit!</Button>
+            </h2>
 
         </Header>
         
-        <Main>
-
-
-        </Main>
-        
-
+        <Main></Main>
         <Footer></Footer>
 
       </Container>

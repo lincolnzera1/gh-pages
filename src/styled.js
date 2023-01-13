@@ -31,6 +31,8 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    border-bottom: 3px solid black;
 `
 
 export const Main = styled.main`
@@ -43,6 +45,8 @@ export const Footer = styled.footer`
     grid-area: footer;
     background-color: black;
     height: 10vh;
+
+    margin-top: -3px;
 `
 
 export const Titulo = styled.h1`
@@ -62,8 +66,32 @@ export const Links = styled.a`
         color: black;
     }
 
-    &:hover {
-        
+    &:link {
+        color: black;
     }
 
+    &:hover {
+        cursor: pointer;
+    }
+
+`
+
+export const Button = styled.button`
+    height: 55px;
+    width: 200px;
+    background-color: #DBFF00;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    border-radius: 8px;
+    margin: 0 4px 0 12px;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 5px 5px 4px black;
+
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `
