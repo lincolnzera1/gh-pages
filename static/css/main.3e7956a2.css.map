@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.3e7956a2.css","mappings":"2DAGA,EAGI,yBAA6B,CAF7B,QAAS,CACT,SAEJ","sources":["App.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Inter');\n\n\n* {\n    margin: 0;\n    padding: 0;\n    font-family: 'Inter', cursive;\n}\n"],"names":[],"sourceRoot":""}
