@@ -33,6 +33,10 @@ export const Header = styled.header`
     justify-content: space-between;
 
     border-bottom: 3px solid black;
+
+    @media (max-width: 620px) {
+        background-color: white;
+    }
 `
 
 export const Main = styled.main`

@@ -1,49 +1,20 @@
-import './styled.js';
-import './App.css'
-import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, Subtitulo, Title, Titulo } from './styled.js';
 
-// Imagens
-import Chuveiro from './assets/8213.jpg'
-import Boi from "./assets/boi.jpg"
-import Visao from "./assets/visao.jpg"
-import Robo from "./assets/robo.jpg"
+// Router
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages';
+import Bolsistas from './pages/Bolsistas';
 
 function App() {
   return (
-    <div className="App">      
-      {/* <Title cor="black">como assim</Title>
-      <Subtitulo>Felps</Subtitulo> */}
+    <div>
       
-      <Container>
-
-        <Header>
-          <Titulo>
-            Laboratório de Inovação Tecnológica            
-          </Titulo>
-          
-            <h2><span><Links href='#'>Projetos</Links></span>
-            <span><Links href='#'>Bolsistas</Links></span>
-            <span><Links href='#'>Sobre</Links></span>
-            <Button>Participe do Lit!</Button>
-            </h2>
-
-        </Header>
-        
-        <Main>
-
-        <Oficinas>Oficinas 4.0 e projeto do Rafael</Oficinas>  
-
-
-          <Caixa url={Chuveiro}>
-          </Caixa>
-          <Caixa url={Boi}></Caixa>
-          <Caixa url={Visao}></Caixa>
-          <Caixa url={Robo}></Caixa>
-        </Main>
-
-        <Footer></Footer>
-
-      </Container>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/bolsistas' element={<Bolsistas />}/>
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
