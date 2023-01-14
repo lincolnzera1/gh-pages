@@ -73,15 +73,20 @@ export const Main = styled.main`
    @media (max-width: 700px) {
     
     display: grid;
-    grid-template-columns: repeat(${props => props.colunas}, 25%);
-    grid-template-rows: 10% 10% auto;
+    grid-template-columns: repeat(${props => props.colunas}, auto);
+    grid-template-rows: ${props => props.row1}% ${props => props.row2}% ${props => props.row3}%;
     align-items: flex-end;
 
-    
+    border-radius: ${props => props.radius};
+
+    h2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        margin: auto;
+    }
 
     padding: 10px;
-
-    
 
    }
    
@@ -169,8 +174,8 @@ export const Caixa = styled.div`
     cursor: pointer;
 
     @media (max-width: 700px) {
-        border: 0;
-        border-radius: ${props => props.radius};
+        border: ${props => props.border}px solid black;
+        border-radius: ${props => props.radius}%;
 
         height: 70%;
         width: 100%;
@@ -182,13 +187,18 @@ export const Caixa = styled.div`
 export const Oficinas = styled.h1`
     grid-column-start: 1;
     grid-column-end: 5;
-
     text-align: center;
 
+    font-size: 28px;
     margin-top: 50px;
 
     @media (max-width: 700px) {
-        
+        h1 {
+            font-size: 25px;
+        }
+    
+        grid-column-start: 1;
+        grid-column-end: 5;
     }
 `
 
@@ -212,4 +222,7 @@ export const Tags = styled.div`
 
     margin: 7px;
 
+    @media (min-width: 700px) {
+        display: none;
+    }
 `

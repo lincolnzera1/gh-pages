@@ -6,20 +6,26 @@ import Rafael from '../assets/rafael.jpg'
 
 import Lit from '../assets/litLogo.png'
 
+import { useNavigate } from 'react-router-dom'
+
 const Bolsistas = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div>
         <Header>
-          <img src={Lit} alt="" />
+          <img src={Lit} alt="" onClick={() => {navigate('/')}}/>
         </Header>
-        <Main colunas={3}>
-          <Caixa cor="white"></Caixa>
-          <Caixa url={Italo} ></Caixa>
-          <Caixa></Caixa>
+        <Main colunas={3} row1={20} row2={40} row3={40}>
+          <h2>Bolsistas mais gaiatos</h2>
+          <Caixa border={0} cor="white"></Caixa>
+          <Caixa radius={50} url={Italo} ></Caixa>
+          <Caixa border={0}></Caixa>
 
-          <Caixa url={Noe} ></Caixa>
-          <Caixa></Caixa>
-          <Caixa url={Rafael} ></Caixa>
+          <Caixa radius={50} url={Noe} ></Caixa>
+          <Caixa border={0}></Caixa>
+          <Caixa radius={50} url={Rafael} ></Caixa>
         </Main>
     </div>
   )
