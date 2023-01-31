@@ -6,6 +6,7 @@ const ChatGpt = () => {
 
   const [pergunta, setPergunta] = useState("");
   const [generatedText, setGeneratedText] = useState("");
+  const Api_key = process.env.REACT_APP_PARSE_CHAT_KEY;
 
   const send = (pergunta) => {
     console.log("Sua pergunta: " + pergunta)
@@ -14,7 +15,7 @@ const ChatGpt = () => {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: "Bearer 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",
+        Authorization: "Bearer " + Api_key,
       },
       body: JSON.stringify({
         model: "text-davinci-003",
