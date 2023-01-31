@@ -18,7 +18,7 @@ Parse.serverURL = process.env.REACT_APP_PARSE_HOST_URL;
 
 function App() {
 
-  console.log(`${process.env.REACT_APP_API_KEY} é o item`);
+  console.log(`${process.env.REACT_APP_API_KEY} é o item and have a good day`);
   return (
     <div>
 
