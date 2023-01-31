@@ -226,3 +226,110 @@ export const Tags = styled.div`
         display: none;
     }
 `
+
+export const Registro = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #d0f16c;
+    height: 90vh;
+    width: 100vw;
+
+    p {
+        font-size: 17px;
+        color: black;
+
+        margin-left: auto;
+        margin-right: 60px;
+
+    }
+`
+
+export const Input = styled.input`
+
+  background-color: ${props => props.backgroundColor};
+  height: 50px;
+  width: 80vw;
+
+  border: 1px solid black;
+  border-radius: 20px;
+
+  margin-bottom: 25px;
+
+  font-size: ${props => props.fontsize}px;
+  padding-left: ${props => props.padding}px;
+
+  ::placeholder {
+    color: black;
+    
+
+    font-size: ${props => props.fontsize}px;
+  }
+
+  :focus {
+    border: 0;
+  }
+`
+
+export const InputsText = styled.div`
+    margin-bottom: 20px;
+    
+
+    p {
+        visibility: ${props => props.condition};
+        color: red; 
+        font-size: 20px;
+        margin: -20px 0 -43px 0px;
+
+        
+    }
+`
+
+export const ChatScreen = styled.div`
+    background-color: lightgrey;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    height: 100vh;
+    width: 100vw;
+
+    p {
+        text-align: justify;
+    
+        width: 70vw;
+
+        border: 2px solid black;
+    }
+    
+
+    textarea {
+        width: 300px;
+        
+        padding-bottom: 50px;
+        font-size: 20px;
+
+        word-break: break-all;
+
+        margin-bottom: 30px;
+    }
+
+    button {
+        width: 300px;
+        height: 60px;
+
+        font-size: 25px;
+
+        background-color: #51D65E;
+
+        border-radius: 10px;
+
+        margin-bottom: 30px;
+    }
+`
