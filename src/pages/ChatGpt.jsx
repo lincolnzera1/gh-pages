@@ -14,7 +14,7 @@ const ChatGpt = () => {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: "Bearer " + "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",
+        Authorization: "Bearer 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",
       },
       body: JSON.stringify({
         model: "text-davinci-003",
