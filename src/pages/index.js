@@ -3,7 +3,7 @@ import './App.css'
 import { Button, Caixa, Container, Footer, Header, Links, Main, Oficinas, StyledLink, Subtitulo, Tags, Title, Titulo } from '../styled.js';
 
 // Back4App
-
+import axios from 'axios';
 import { useState } from 'react';
 import Parse from 'parse/dist/parse.min.js';
 
@@ -20,6 +20,17 @@ import Lit from "../assets/litLogo.png"
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+
+  const [data, setData] = useState({});
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:3000/api', data);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const [person, setPerson] = useState(null);
   const navigate = useNavigate();
@@ -79,6 +90,7 @@ const Home = () => {
                         
           </Titulo>          
             <h2>
+              <span><Links href="#" ><StyledLink to='/game' >Game</StyledLink></Links></span>
               <span><Links href="#" ><StyledLink to='/chat' >ChatGPT</StyledLink></Links></span>
               <span><Links href='#'>Projetos</Links></span>
               <span><Links href=''> <StyledLink to='/bolsistas' >Bolsistas</StyledLink> </Links></span>
