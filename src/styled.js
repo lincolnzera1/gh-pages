@@ -25,6 +25,8 @@ export const Container = styled.div`
 export const Header = styled.header`
     grid-area: header;
 
+    text-align: center;
+
     background-color: #51D65E;
     font-family: Inte;
 
