@@ -1,7 +1,7 @@
 import React from 'react'
 import { Input, InputsText } from '../styled'
 
-const TextField = (props) => {
+const TextField = (props) => { // top
 
     return (
         <div>
